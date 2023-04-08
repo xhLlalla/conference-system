@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Conference</title>
+</head>
+<body>
+<div algin="center">
+  <h1>Edit Conference</h1>
+  <br/>
+  <form action="#" th:action="@{/save}" th:object="${conference}" method="post">
+    <table border="0" cellpadding="10">
+      <tr>
+        <td>Conference ID:</td>
+        <td><input type="text" th:field="*{id}" readonly="readonly" /></td>
+      </tr>
+      <tr>
+        <td>Name:</td>
+        <td><input type="text" th:field="*{name}" /></td>
+      </tr>
+      <tr>
+        <td>Speaker:</td>
+        <td><input type="text" th:field="*{speaker}" /></td>
+      </tr>
+      <tr>
+        <td>Date Time:</td>
+        <td><input type="date" th:field="*{datetime}" /></td>
+      </tr>
+      <tr>
+        <td>Location:</td>
+        <td><input type="text" th:field="*{location}" /></td>
+      </tr>
+      <tr>
+        <td>Status:</td>
+        <td><input type="text" th:field="*{status}" /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button type="submit">Save</button></td>
+      </tr>
+    </table>
+
+  </form>
+
+</div>
+
+
+</body>
+</html>

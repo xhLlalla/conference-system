@@ -2,12 +2,12 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Conference list</title>
+    <title>Conference List</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <div align="center">
-    <h1> Conference list</h1>
+    <h1> Conference List</h1>
     <a href="new">Create New Conference</a>
     <br/><br/>
 
@@ -15,20 +15,21 @@
     <table border="1" cellpadding="10">
         <thead>
         <tr>
-            <th> Conference Id</th>
+            <th>Conference ID</th>
             <th>Name</th>
             <th>Speaker</th>
             <th>Date Time</th>
             <th>Location</th>
             <th>Status</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="conference : ${listConference}">
-            <td th:text="${conference.id}">Conference id</td>
+            <td th:text="${conference.id}">Conference Id</td>
             <td th:text="${conference.name}">Name</td>
             <td th:text="${conference.speaker}">Speaker</td>
-            <td th:text="${conference.dateTime}">Date Time</td>
+            <td th:text="${conference.datetime}">Date Time</td>
             <td th:text="${conference.location}">Location</td>
             <td th:text="${conference.status}">Status</td>
             <td>
